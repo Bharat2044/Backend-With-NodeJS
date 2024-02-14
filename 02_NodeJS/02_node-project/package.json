@@ -1,0 +1,19 @@
+{
+  "name": "node_project",
+  "version": "1.0.0",
+  "description": "This is the first node.js project for my learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "node.js",
+    "app"
+  ],
+  "author": "Bharat Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
