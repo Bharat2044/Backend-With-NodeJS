@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 // const studentModel = require("./model/student.model");
 const studentModel = require("./model/student.model1");
-
+ 
 /**
  * Write the code to connect with MongoDB
  */
