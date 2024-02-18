@@ -2,7 +2,7 @@
  * Define the schema of Students collection to be stored in the DB
  */
 const mongoose = require("mongoose")
-
+ 
 // Schema / Collection -> Adding Validation/Checks
 const studentSchema = new mongoose.Schema({
     name : {
