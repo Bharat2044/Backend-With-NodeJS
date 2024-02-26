@@ -4,14 +4,16 @@
 
 // Importing required modules
 const express = require('express');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const app = express();
 
 // Importing configuration files and the user model
 const server_config = require("./configs/server.config");
 const db_config = require("./configs/db.config");
-const user_model = require("./model/user.model");
+const user_model = require("./models/user.model");
+
+app.use(express.json());    // middleware -> read json as js object
 
 /**
  * Create an admin user at the start of the application
@@ -60,6 +62,13 @@ async function init() {
         console.log("Error while creating admin", err);
     }
 }
+
+
+/**
+ * Stich the route to the server
+ */
+require("./routes/auth.routes")(app)
+
 
 /**
  * Start the server
