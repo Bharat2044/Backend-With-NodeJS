@@ -31,10 +31,10 @@ module.exports = (app) => {
      * POST localhost:8888/ecomm/api/v1/auth/signin
      * 
      * Middleware:
-     * - authMiddleware.verifySignUpBody: Verifies the request body for signin to ensure it meets the required criteria.
+     * - authMiddleware.verifySignInBody: Verifies the request body for signin to ensure it meets the required criteria.
      * 
      * Controller:
      * - authController.signin: Handles the signin request and initiates the user authentication process.
      */
-    app.post("/ecomm/api/v1/auth/signin", [authMiddleware.verifySignUpBody], authController.signin);
+    app.post("/ecomm/api/v1/auth/signin",[authMiddleware.verifySignInBody], authController.signin );
 };
