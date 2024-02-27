@@ -1,11 +1,16 @@
 /**
- * POST localhost:8888/ecomm/api/v1/auth/signup
+ * Route Configuration for User Signup
  * 
- * I need to intercept this
+ * This file sets up the route for handling user signup requests.
+ * The route is defined as a POST request to "/ecomm/api/v1/auth/signup".
+ * It includes middleware for verifying the signup request body and calls the signup function in the authController.
  */
-const authController = require("../controllers/auth.controller")
 
+const authController = require("../controllers/authController");
+const authMiddleware = require("../middlewares/authMiddleware");
 
-module.exports = (app)=>{
-    app.post("/ecomm/api/v1/auth/signup", authController.signup)
-}
+// Exporting a function that sets up the route on the provided Express app
+module.exports = (app) => {
+    // Define a POST route for user signup
+    app.post("/ecomm/api/v1/auth/signup", [authMiddleware.verifySignUpBody], authController.signup);
+};
