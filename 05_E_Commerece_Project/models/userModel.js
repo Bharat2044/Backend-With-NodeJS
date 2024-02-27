@@ -45,6 +45,5 @@ const userSchema = new mongoose.Schema(
   { versionKey: false, timestamps: true } // Configuration options: versionKey disabled, timestamps for createdAt and updatedAt
 );
 
-
 // Exporting the User model based on the defined schema
 module.exports = mongoose.model("User", userSchema);
