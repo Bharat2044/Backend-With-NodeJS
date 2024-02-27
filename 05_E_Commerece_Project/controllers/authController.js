@@ -5,7 +5,7 @@
  */
 
 const bcrypt = require("bcrypt");
-const user_model = require("../models/userModel");
+const userModel = require("../models/userModel");
 
 // Controller function for user registration
 exports.signup = async (req, res) => {
@@ -27,7 +27,7 @@ exports.signup = async (req, res) => {
 
     try {
         // Attempt to create the user in the database
-        const user_created = await user_model.create(userObj);
+        const user_created = await userModel.create(userObj);
 
         /**
          * Return this user
