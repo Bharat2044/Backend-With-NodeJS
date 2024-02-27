@@ -14,8 +14,8 @@ module.exports = (app) => {
 
     // Define a POST route for user signup
     /**
-     * Define a POST route for user signup
-     * POST localhost:8888/ecomm/api/v1/auth/signup
+     * POST Route for User Signup
+     * - Endpoint: POST localhost:8888/ecomm/api/v1/auth/signup
      * 
      * Middleware:
      * - authMiddleware.verifySignUpBody: Verifies the request body for signup to ensure it meets the required criteria.
@@ -25,10 +25,11 @@ module.exports = (app) => {
      */
     app.post("/ecomm/api/v1/auth/signup", [authMiddleware.verifySignUpBody], authController.signup);
 
+    
     // Define a POST route for user signin
     /**
-     * Define a POST route for user signin
-     * POST localhost:8888/ecomm/api/v1/auth/signin
+     * POST Route for User Signin
+     * - Endpoint: POST localhost:8888/ecomm/api/v1/auth/signin
      * 
      * Middleware:
      * - authMiddleware.verifySignInBody: Verifies the request body for signin to ensure it meets the required criteria.
