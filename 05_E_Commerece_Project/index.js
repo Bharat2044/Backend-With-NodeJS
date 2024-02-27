@@ -34,8 +34,9 @@ db.on("error", () => {
     console.log('Error while connecting to MongoDB');
 });
 
-db.once("open", () => {
+db.on("open", () => {
     console.log("Connected to MongoDB");
+    
     init();
 });
 
